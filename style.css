@@ -532,37 +532,54 @@ lokasi-item {
 }
 /* --- RESPONSIVE DESIGN (MOBILE) --- */
 @media (max-width: 768px) {
-    /* Navbar Mobile */
-    .nav-links {
-        display: none; /* Menyembunyikan menu standar, nanti bisa diganti menu burger */
-    }
-    
-    .nav-wrapper {
-        justify-content: center; /* Logo di tengah untuk mobile */
+    /* 1. Sembunyikan teks logo yang panjang di HP agar tidak sumpek */
+    .logo-text {
+        display: none;
     }
 
-    /* Hero Section (Background) */
+    .nav-wrapper {
+        padding: 10px 15px;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: flex; /* Pastikan menu tetap muncul */
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* 2. Paksa Background Muncul & Rapikan Teks Hero */
     .hero-container {
-        height: 80vh; /* Sedikit lebih pendek di HP */
-        background-attachment: scroll; /* Matikan parallax agar ringan di HP */
+        padding-top: 120px; /* Beri jarak agar tidak tertutup navbar */
+        min-height: 90vh;
+        background-image: url('hero-bg.jpg') !important; /* Paksa gambar muncul */
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .hero-content h1 {
-        font-size: 2rem; /* Ukuran teks lebih kecil agar tidak terpotong */
-        padding: 0 10px;
+        font-size: 28px; /* Kecilkan judul agar tidak tumpuk-tumpuk */
+        line-height: 1.2;
+        margin-bottom: 15px;
     }
 
     .hero-content p {
-        font-size: 1rem;
-        padding: 0 15px;
+        font-size: 15px;
+        line-height: 1.4;
     }
 
-    /* Tombol Hero */
-    .hero-btns {
-        flex-direction: column; /* Tombol jadi tumpuk atas-bawah */
-        gap: 10px;
-        align-items: center;
+    /* 3. Tombol agar tidak terlalu lebar */
+    .btn-primary {
+        width: auto;
+        min-width: 200px;
+        padding: 12px 20px;
     }
+}
 
     .btn-primary, .btn-secondary {
         width: 80%; /* Tombol lebih lebar di HP agar mudah diklik jempol */
@@ -597,3 +614,4 @@ lokasi-item {
         height: 45px;
     }
 }
+

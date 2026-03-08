@@ -530,54 +530,54 @@ lokasi-item {
     color: #333;
 
 }
-/* Tampilan khusus HP agar Menu tidak hilang */
+/* --- PERBAIKAN TAMPILAN MOBILE --- */
 @media (max-width: 768px) {
-    /* Perkecil area Navbar */
+    /* Navbar agar tetap satu baris */
     .nav-wrapper {
-        padding: 5px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap; /* Mencegah menu turun ke bawah */
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 15px !important;
     }
 
-    /* Perkecil Logo dan Sembunyikan Teks Panjang */
-    .logo-img {
-        height: 30px; /* Logo lebih kecil di HP */
-    }
-    
+    /* Sembunyikan tulisan 'Muli Store Indonesia' di HP */
     .logo-text {
-        display: none; /* Sembunyikan tulisan agar menu punya ruang */
+        display: none !important;
     }
 
-    /* Atur posisi menu Home & Produk */
+    /* Pastikan Logo muncul dengan ukuran pas */
+    .logo-img {
+        display: block !important;
+        height: 35px !important;
+        width: auto !important;
+    }
+
+    /* Atur Menu Home & Produk agar sejajar logo */
     .nav-links {
-        display: flex !important; /* Paksa menu tetap muncul */
-        gap: 10px;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 15px !important;
+        list-style: none;
         margin: 0;
         padding: 0;
-        list-style: none;
     }
 
     .nav-links a {
-        font-size: 13px; /* Ukuran font menu lebih kecil */
-        padding: 5px 8px;
+        font-size: 14px !important;
+        font-weight: 600;
+        text-decoration: none;
     }
 
-    /* Perbaikan Hero Section (Teks Utama) */
+    /* Atur teks utama (Hero) agar rapi */
     .hero-container {
-        padding-top: 80px; 
-        background-image: url('hero-bg.jpg') !important;
-        background-size: cover;
+        padding: 100px 20px 50px 20px !important;
+        text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 24px; /* Judul tidak terlalu besar */
-        line-height: 1.2;
-    }
-
-    .hero-content p {
-        font-size: 14px;
+        font-size: 26px !important;
+        line-height: 1.3 !important;
     }
 }
 
@@ -622,5 +622,6 @@ lokasi-item {
         height: 45px;
     }
 }
+
 
 

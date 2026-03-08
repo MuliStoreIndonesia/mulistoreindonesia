@@ -80,15 +80,24 @@ body {
     color: #007bff;
 }
 
+/* Pastikan tombol Hubungi Kami selalu bisa diklik */
 .btn-hubungi {
-    background-color: #007bff; /* Biru Muli Store */
+    position: relative !important;
+    z-index: 9999 !important; /* Lapisan paling atas */
+    pointer-events: auto !important; /* Pastikan menerima klik */
+    cursor: pointer !important;
+    display: inline-block !important;
+    background-color: #007bff;
     color: white !important;
     padding: 10px 20px;
     border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: 0.3s;
+    text-decoration: none !important;
+}
+
+/* Tambahan untuk Navbar agar tidak menghalangi */
+.nav-wrapper {
+    z-index: 10000 !important; /* Navbar harus di atas Hero */
+}
 }
 
 .btn-hubungi:hover {
@@ -639,6 +648,7 @@ lokasi-item {
         height: 45px;
     }
 }
+
 
 
 

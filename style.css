@@ -672,6 +672,50 @@ footer {
     position: relative;
     z-index: 10;
 }
+/* --- FIX MANIFOLD / SATU FRAME HP --- */
+@media screen and (max-width: 768px) {
+    /* Pastikan seluruh body tidak bisa geser kanan-kiri */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Navbar satu baris tanpa pecah */
+    .nav-wrapper {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 5px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box; /* Penting: padding tidak menambah lebar */
+    }
+
+    /* Menu agar rapat dan pas di frame */
+    .nav-links {
+        display: flex !important;
+        gap: 8px !important; /* Perkecil jarak antar menu */
+    }
+
+    .nav-links a {
+        font-size: 12px !important; /* Perkecil teks sedikit lagi */
+        white-space: nowrap; /* Mencegah teks menu turun ke bawah */
+    }
+
+    /* Tombol Hubungi Kami (Jika di Navbar) */
+    .btn-hubungi {
+        padding: 6px 12px !important;
+        font-size: 11px !important;
+        margin-left: 5px;
+    }
+
+    /* Pastikan Hero Content tidak melebar */
+    .hero-content {
+        width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box;
+    }
+}
 
 
 

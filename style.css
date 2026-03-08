@@ -80,12 +80,29 @@ body {
     color: #007bff;
 }
 
-/* Button UI */
-.btn-contact {
-    background: #007bff;
-    color: #fff !important;
-    padding: 8px 20px;
+.btn-hubungi {
+    background-color: #007bff; /* Biru Muli Store */
+    color: white !important;
+    padding: 10px 20px;
     border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-hubungi:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Khusus Mobile agar tidak terpotong (Media Query) */
+@media (max-width: 768px) {
+    .btn-hubungi {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
 }
 
 .btn-primary {
@@ -622,6 +639,7 @@ lokasi-item {
         height: 45px;
     }
 }
+
 
 
 

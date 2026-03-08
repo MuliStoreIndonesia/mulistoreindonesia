@@ -530,48 +530,56 @@ lokasi-item {
     color: #333;
 
 }
-/* --- RESPONSIVE DESIGN (MOBILE) --- */
+/* Tampilan khusus HP agar Menu tidak hilang */
 @media (max-width: 768px) {
-    /* 1. Sembunyikan teks logo yang panjang di HP agar tidak sumpek */
-    .logo-text {
-        display: none;
-    }
-
+    /* Perkecil area Navbar */
     .nav-wrapper {
-        padding: 10px 15px;
+        padding: 5px 10px;
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap; /* Mencegah menu turun ke bawah */
     }
 
+    /* Perkecil Logo dan Sembunyikan Teks Panjang */
+    .logo-img {
+        height: 30px; /* Logo lebih kecil di HP */
+    }
+    
+    .logo-text {
+        display: none; /* Sembunyikan tulisan agar menu punya ruang */
+    }
+
+    /* Atur posisi menu Home & Produk */
     .nav-links {
-        display: flex; /* Pastikan menu tetap muncul */
-        gap: 15px;
+        display: flex !important; /* Paksa menu tetap muncul */
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
 
     .nav-links a {
-        font-size: 14px;
+        font-size: 13px; /* Ukuran font menu lebih kecil */
+        padding: 5px 8px;
     }
 
-    /* 2. Paksa Background Muncul & Rapikan Teks Hero */
+    /* Perbaikan Hero Section (Teks Utama) */
     .hero-container {
-        padding-top: 120px; /* Beri jarak agar tidak tertutup navbar */
-        min-height: 90vh;
-        background-image: url('hero-bg.jpg') !important; /* Paksa gambar muncul */
-        background-position: center center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        padding-top: 80px; 
+        background-image: url('hero-bg.jpg') !important;
+        background-size: cover;
     }
 
     .hero-content h1 {
-        font-size: 28px; /* Kecilkan judul agar tidak tumpuk-tumpuk */
+        font-size: 24px; /* Judul tidak terlalu besar */
         line-height: 1.2;
-        margin-bottom: 15px;
     }
 
     .hero-content p {
-        font-size: 15px;
-        line-height: 1.4;
+        font-size: 14px;
     }
+}
 
     /* 3. Tombol agar tidak terlalu lebar */
     .btn-primary {
@@ -614,4 +622,5 @@ lokasi-item {
         height: 45px;
     }
 }
+
 

@@ -647,9 +647,31 @@ lokasi-item {
         width: 45px;
         height: 45px;
     }
+/* Perbaikan Tombol WhatsApp di Footer */
+.btn-footer-wa {
+    display: inline-block !important;
+    background-color: #25d366; /* Warna Hijau WhatsApp */
+    color: white !important;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    font-weight: bold;
+    position: relative;
+    z-index: 999; /* Pastikan di atas elemen footer lainnya */
+    pointer-events: auto !important;
 }
 
+.btn-footer-wa:hover {
+    background-color: #128c7e;
+    transform: translateY(-2px);
+}
 
+/* Pastikan Footer tidak menutupi dirinya sendiri */
+footer {
+    position: relative;
+    z-index: 10;
+}
 
 
 

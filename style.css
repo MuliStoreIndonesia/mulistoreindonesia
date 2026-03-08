@@ -528,4 +528,72 @@ lokasi-item {
     margin: 0;
     font-size: 0.9rem;
     color: #333;
+
+}
+/* --- RESPONSIVE DESIGN (MOBILE) --- */
+@media (max-width: 768px) {
+    /* Navbar Mobile */
+    .nav-links {
+        display: none; /* Menyembunyikan menu standar, nanti bisa diganti menu burger */
+    }
+    
+    .nav-wrapper {
+        justify-content: center; /* Logo di tengah untuk mobile */
+    }
+
+    /* Hero Section (Background) */
+    .hero-container {
+        height: 80vh; /* Sedikit lebih pendek di HP */
+        background-attachment: scroll; /* Matikan parallax agar ringan di HP */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Ukuran teks lebih kecil agar tidak terpotong */
+        padding: 0 10px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    /* Tombol Hero */
+    .hero-btns {
+        flex-direction: column; /* Tombol jadi tumpuk atas-bawah */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 80%; /* Tombol lebih lebar di HP agar mudah diklik jempol */
+        text-align: center;
+    }
+
+    /* Popup Modal */
+    .modal-content {
+        width: 90%; /* Modal memenuhi lebar layar HP */
+        margin: 20% auto;
+        padding: 20px;
+    }
+
+    /* Footer Mobile */
+    .footer-grid {
+        grid-template-columns: 1fr; /* Satu kolom saja ke bawah */
+        text-align: center;
+    }
+
+    .footer-social .social-icons {
+        align-items: center; /* Ikon sosmed di tengah */
+    }
+    
+    /* Floating Button (Shopee/Tokopedia) */
+    .floating-social {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .float-icon {
+        width: 45px;
+        height: 45px;
+    }
 }
